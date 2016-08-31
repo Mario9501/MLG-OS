@@ -1,14 +1,9 @@
 mov ah, 0x0e
-mov al, 'H'
+mov al, 'M'
 int 0x10
-mov al, 'e'
+mov al, 'L '
 int 0x10
-mov al, 'l'
-int 0x10,
-mov al, 'l'
-int 0x10
-mov al, 'o'
-int 0x10
+mov al, 'G'
 
 jmp $
 
