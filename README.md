@@ -33,12 +33,15 @@ To get started with the MLG-OS project, follow the instructions below:
 
 3. Build the project:
    ```
-   # Add build instructions here
+   nasm -f bin src/boot_sect.asm -o build/boot_sect.bin
+   nasm -f bin src/CP.ASM -o build/CP.bin
+   nasm -f bin src/UNKNOWN_0.asm -o build/UNKNOWN_0.bin
+   cat build/boot_sect.bin build/CP.bin build/UNKNOWN_0.bin > build/MLG-OS.img
    ```
 
 4. Run the project:
    ```
-   # Add run instructions here
+   qemu-system-x86_64 -drive format=raw,file=build/MLG-OS.img
    ```
 
 ## Contributing
